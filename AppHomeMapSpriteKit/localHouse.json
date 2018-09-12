@@ -1,7 +1,7 @@
 {
     "TotalPlaces":2,
     "Places":[
-              {"name":"House", "description":"This is my house", "address":"asdfgh", "latitude":-33.462820, "logitude":-70.661855},
-              {"name":"Work", "description":"This is where I work", "address":"sdfsdfsf", "latitude":-33.488926, "logitude":-70.715662},
-              ]
+              {"name":"House", "description":"This is my house", "address":"asdfgh", "latitude":"-33.462820", "longitude":"-70.661855"},
+              {"name":"Work", "description":"This is where I work", "address":"qwerty", "latitude":"-33.488926", "longitude":"-70.715662"},
+            ]
 }
