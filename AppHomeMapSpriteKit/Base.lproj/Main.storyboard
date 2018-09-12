@@ -73,7 +73,13 @@
                             <outlet property="delegate" destination="rxL-GN-vCL" id="aSo-b4-gwY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="XXa-Pj-ZHv"/>
+                    <navigationItem key="navigationItem" id="XXa-Pj-ZHv">
+                        <barButtonItem key="rightBarButtonItem" title="+ Place" id="eSN-BW-S1U">
+                            <connections>
+                                <segue destination="HWZ-qg-imZ" kind="show" id="woe-1q-Q0N"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="HWZ-qg-imZ" kind="show" identifier="scvFirst" id="gaX-oV-tU0"/>
                     </connections>

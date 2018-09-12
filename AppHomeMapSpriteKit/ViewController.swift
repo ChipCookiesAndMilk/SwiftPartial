@@ -53,6 +53,8 @@ class ViewController : UIViewController {
         // limits the overlap area to just the View Controller's frame
         definesPresentationContext = true;
         
+        /* Link map elements */
+        locationSearchTable.mapView = mapView;
     }
 }
 // in extension intead another class
