@@ -74,8 +74,8 @@ class CatalogueTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
-        //return myPlaces.places[section].devices.count
+        //return 1
+        return myPlaces.places[section].devices.count + 1
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -83,10 +83,32 @@ class CatalogueTableViewController: UITableViewController {
 
         // Configure the cell...
         //print(indexPath)
-        cell.textLabel?.text = myPlaces.places[indexPath[0]].devices[indexPath[1]].deviceName
-        cell.detailTextLabel?.text = myPlaces.places[indexPath[0]].devices[indexPath[1]].deviceDescription  // get the subtitle and add it
-
+        if(myPlaces.places[indexPath[0]].devices.count >  indexPath[1]){
+            cell.textLabel?.text = myPlaces.places[indexPath[0]].devices[indexPath[1]].deviceName
+            cell.detailTextLabel?.text = myPlaces.places[indexPath[0]].devices[indexPath[1]].deviceDescription  // get the subtitle and add it
+        } else {
+            cell.textLabel?.text = ""
+            cell.detailTextLabel?.text = ""
+            
+            let button : UIButton = UIButton(type:UIButtonType.custom) as UIButton
+            
+            button.frame = CGRect(origin: CGPoint(x: 40,y :60), size: CGSize(width: 200, height: 24))
+            let cellHeight: CGFloat = 44.0
+            button.center = CGPoint(x: view.bounds.width / 2.0, y: cellHeight / 2.0)
+            button.backgroundColor = UIColor.gray
+            button.addTarget(self, action: #selector(buttonClicked), for: UIControlEvents.touchUpInside)
+            button.setTitle("Add Device", for: UIControlState.normal)
+            button.tag = indexPath[0]
+            
+            cell.addSubview(button)
+        }
+        
         return cell
+    }
+    
+    @objc func buttonClicked(sender : UIButton!) {
+        // Print the name of the place the button called
+        print("Clicked! \(myPlaces.places[sender.tag].placeName)")
     }
 
     /*
