@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C67BAD94214A38DF00A1F347 /* localDevices.json in Resources */ = {isa = PBXBuildFile; fileRef = C67BAD8C214A38DE00A1F347 /* localDevices.json */; };
+		C67BAD95214A38DF00A1F347 /* DeviceCatalogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BAD8D214A38DE00A1F347 /* DeviceCatalogue.swift */; };
+		C67BAD96214A38DF00A1F347 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C67BAD8E214A38DE00A1F347 /* Base.lproj */; };
+		C67BAD97214A38DF00A1F347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C67BAD8F214A38DE00A1F347 /* Assets.xcassets */; };
+		C67BAD98214A38DF00A1F347 /* CatalogueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BAD90214A38DE00A1F347 /* CatalogueTableViewController.swift */; };
+		C67BAD99214A38DF00A1F347 /* DeviceRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BAD91214A38DE00A1F347 /* DeviceRecord.swift */; };
+		C67BAD9A214A38DF00A1F347 /* PlaceCatalogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BAD92214A38DF00A1F347 /* PlaceCatalogue.swift */; };
+		C67BAD9B214A38DF00A1F347 /* PlaceRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BAD93214A38DF00A1F347 /* PlaceRecord.swift */; };
 		C6F2518C2148B3FA00031F45 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F2518B2148B3FA00031F45 /* LocationSearchTable.swift */; };
 		C6FEAF2821485659009223CD /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FEAF2721485659009223CD /* HomeKit.framework */; };
 		FA96C3762146DCD600788BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96C3752146DCD600788BE0 /* AppDelegate.swift */; };
@@ -19,6 +27,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C67BAD8C214A38DE00A1F347 /* localDevices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = localDevices.json; sourceTree = "<group>"; };
+		C67BAD8D214A38DE00A1F347 /* DeviceCatalogue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCatalogue.swift; sourceTree = "<group>"; };
+		C67BAD8E214A38DE00A1F347 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		C67BAD8F214A38DE00A1F347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C67BAD90214A38DE00A1F347 /* CatalogueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogueTableViewController.swift; sourceTree = "<group>"; };
+		C67BAD91214A38DE00A1F347 /* DeviceRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceRecord.swift; sourceTree = "<group>"; };
+		C67BAD92214A38DF00A1F347 /* PlaceCatalogue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceCatalogue.swift; sourceTree = "<group>"; };
+		C67BAD93214A38DF00A1F347 /* PlaceRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceRecord.swift; sourceTree = "<group>"; };
 		C6F2518B2148B3FA00031F45 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		C6FEAF2721485659009223CD /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		FA96C3722146DCD600788BE0 /* AppHomeMapSpriteKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppHomeMapSpriteKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,8 +86,16 @@
 				FA96C3752146DCD600788BE0 /* AppDelegate.swift */,
 				FA96C3772146DCD600788BE0 /* ViewController.swift */,
 				C6F2518B2148B3FA00031F45 /* LocationSearchTable.swift */,
-				FA96C3792146DCD600788BE0 /* Main.storyboard */,
 				FA96C38D2146E4C000788BE0 /* localHouse.json */,
+				C67BAD8C214A38DE00A1F347 /* localDevices.json */,
+				C67BAD8F214A38DE00A1F347 /* Assets.xcassets */,
+				C67BAD8E214A38DE00A1F347 /* Base.lproj */,
+				C67BAD90214A38DE00A1F347 /* CatalogueTableViewController.swift */,
+				C67BAD8D214A38DE00A1F347 /* DeviceCatalogue.swift */,
+				C67BAD91214A38DE00A1F347 /* DeviceRecord.swift */,
+				C67BAD92214A38DF00A1F347 /* PlaceCatalogue.swift */,
+				C67BAD93214A38DF00A1F347 /* PlaceRecord.swift */,
+				FA96C3792146DCD600788BE0 /* Main.storyboard */,
 				FA96C37C2146DCD600788BE0 /* Assets.xcassets */,
 				FA96C37E2146DCD600788BE0 /* LaunchScreen.storyboard */,
 				FA96C3812146DCD700788BE0 /* Info.plist */,
@@ -158,6 +182,9 @@
 				FA96C37D2146DCD600788BE0 /* Assets.xcassets in Resources */,
 				FA96C38E2146E4C000788BE0 /* localHouse.json in Resources */,
 				FA96C37B2146DCD600788BE0 /* Main.storyboard in Resources */,
+				C67BAD97214A38DF00A1F347 /* Assets.xcassets in Resources */,
+				C67BAD96214A38DF00A1F347 /* Base.lproj in Resources */,
+				C67BAD94214A38DF00A1F347 /* localDevices.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +195,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C67BAD9B214A38DF00A1F347 /* PlaceRecord.swift in Sources */,
+				C67BAD9A214A38DF00A1F347 /* PlaceCatalogue.swift in Sources */,
+				C67BAD99214A38DF00A1F347 /* DeviceRecord.swift in Sources */,
+				C67BAD98214A38DF00A1F347 /* CatalogueTableViewController.swift in Sources */,
 				C6F2518C2148B3FA00031F45 /* LocationSearchTable.swift in Sources */,
+				C67BAD95214A38DF00A1F347 /* DeviceCatalogue.swift in Sources */,
 				FA96C3782146DCD600788BE0 /* ViewController.swift in Sources */,
 				FA96C3762146DCD600788BE0 /* AppDelegate.swift in Sources */,
 			);

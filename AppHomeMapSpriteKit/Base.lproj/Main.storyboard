@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="rxL-GN-vCL" kind="relationship" relationship="rootViewController" id="IYv-Vt-WHV"/>
+                        <segue destination="35D-jg-1XU" kind="relationship" relationship="rootViewController" id="tEm-bU-F1B"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bf1-0a-Nc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -78,7 +78,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYB-Ty-9OB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="185"/>
+            <point key="canvasLocation" x="1612" y="185"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gsD-2U-dDx">
@@ -107,7 +107,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wL-gd-GzN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1614" y="185"/>
+            <point key="canvasLocation" x="2305" y="174"/>
+        </scene>
+        <!--Catalogue Table View Controller-->
+        <scene sceneID="wo2-2W-q2M">
+            <objects>
+                <tableViewController storyboardIdentifier="CatalogueTable" id="35D-jg-1XU" customClass="CatalogueTableViewController" customModule="AppHomeMapSpriteKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jyf-5p-ljj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="wkG-rZ-EOy" detailTextLabel="CLc-fM-diq" style="IBUITableViewCellStyleSubtitle" id="fQy-46-A3h">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fQy-46-A3h" id="4fW-j5-rMr">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wkG-rZ-EOy">
+                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CLc-fM-diq">
+                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="35D-jg-1XU" id="ouk-Ui-Law"/>
+                            <outlet property="delegate" destination="35D-jg-1XU" id="vTa-Ja-ChT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="2tc-sq-u7D">
+                        <barButtonItem key="rightBarButtonItem" title="+ Place" id="CU6-xV-wSy">
+                            <connections>
+                                <segue destination="rxL-GN-vCL" kind="show" id="8DM-mW-G6w"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ROX-gA-TwR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="833" y="185"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

@@ -15,6 +15,34 @@ class LocationSearchTable : UITableViewController {
     var mapView : MKMapView? = nil;
     // locationHandler
     var handleMapSearchDelegate:HandleMapSearch? = nil;
+    
+    var savedPlaces = ["placeName": [],
+                       "latitute": [],
+                       "lotitud": []];
+    
+    func parseAddress(selectedItem:MKPlacemark) -> String {
+        // put a space between "4" and "Melrose Place"
+        let firstSpace = (selectedItem.subThoroughfare != nil && selectedItem.thoroughfare != nil) ? " " : ""
+        // put a comma between street and city/state
+        let comma = (selectedItem.subThoroughfare != nil || selectedItem.thoroughfare != nil) && (selectedItem.subAdministrativeArea != nil || selectedItem.administrativeArea != nil) ? ", " : ""
+        // put a space between "Washington" and "DC"
+        let secondSpace = (selectedItem.subAdministrativeArea != nil && selectedItem.administrativeArea != nil) ? " " : ""
+        let addressLine = String(
+            format:"%@%@%@%@%@%@%@",
+            // street number
+            selectedItem.subThoroughfare ?? "",
+            firstSpace,
+            // street name
+            selectedItem.thoroughfare ?? "",
+            comma,
+            // city
+            selectedItem.locality ?? "",
+            secondSpace,
+            // state
+            selectedItem.administrativeArea ?? ""
+        )
+        return addressLine
+    }
 }
 
 // extension for the locationSearchTable
@@ -22,7 +50,8 @@ extension LocationSearchTable : UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         /* Set up API call */
         //  unwraps the optional values for mapView and the search bar text
-        guard let mapView = mapView, let searchBarText = searchController.searchBar.text else { return }
+        guard let mapView = mapView,
+            let searchBarText = searchController.searchBar.text else { return }
         // The search string comes from the search bar text, and the map region comes from the mapView.
         let request = MKLocalSearchRequest()
         request.naturalLanguageQuery = searchBarText
@@ -59,6 +88,8 @@ extension LocationSearchTable {
         let selectedItem = matchingItems[indexPath.row].placemark
         handleMapSearchDelegate?.dropPinZoomIn(placemark: selectedItem)
         dismiss(animated: true, completion: nil)
+        // add this new location to our dictionary
+        
     }
 }
 
