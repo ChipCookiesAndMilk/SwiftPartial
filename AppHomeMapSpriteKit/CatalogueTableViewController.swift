@@ -12,6 +12,8 @@ class CatalogueTableViewController: UITableViewController {
     
     private var myDevices = DeviceCatalogue()
     private var myPlaces = PlaceCatalogue()
+    
+    var selectedDevice:DeviceRecord = DeviceRecord(name: "default", place: "", description: "")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,6 +112,15 @@ class CatalogueTableViewController: UITableViewController {
         // Print the name of the place the button called
         print("Clicked! \(myPlaces.places[sender.tag].placeName)")
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //print( indexPath )
+        if (myPlaces.places[indexPath[0]].devices.count >  indexPath[1]) {
+            selectedDevice = myPlaces.places[indexPath[0]].devices[indexPath[1]]
+            print("Selected Device -> \(selectedDevice.deviceName)")
+            self.performSegue(withIdentifier: "showDeviceDetail", sender: nil)
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -146,14 +157,16 @@ class CatalogueTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "showDeviceDetail" {
+            var next = segue.destination as! DeviceDetailViewController;
+            next.myDevice = selectedDevice
+        }
     }
-    */
 
 }

@@ -24,6 +24,8 @@
 		FA96C3802146DCD600788BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA96C37E2146DCD600788BE0 /* LaunchScreen.storyboard */; };
 		FA96C38C2146DD5900788BE0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA96C38B2146DD5900788BE0 /* MapKit.framework */; };
 		FA96C38E2146E4C000788BE0 /* localHouse.json in Resources */ = {isa = PBXBuildFile; fileRef = FA96C38D2146E4C000788BE0 /* localHouse.json */; };
+		FAD9EDED214AB8FA00010A00 /* DeviceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9EDEC214AB8FA00010A00 /* DeviceDetailViewController.swift */; };
+		FAD9EDEF214AC70800010A00 /* light.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD9EDEE214AC70800010A00 /* light.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		FA96C3872146DD5600788BE0 /* AppHomeMapSpriteKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppHomeMapSpriteKit.entitlements; sourceTree = "<group>"; };
 		FA96C38B2146DD5900788BE0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FA96C38D2146E4C000788BE0 /* localHouse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = localHouse.json; sourceTree = "<group>"; };
+		FAD9EDEC214AB8FA00010A00 /* DeviceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailViewController.swift; sourceTree = "<group>"; };
+		FAD9EDEE214AC70800010A00 /* light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = light.png; path = "../../iosAppsDoNOTDelete/mapkit-ios-demo-master/MapKitDemo/light.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +93,10 @@
 				FA96C38D2146E4C000788BE0 /* localHouse.json */,
 				C67BAD8C214A38DE00A1F347 /* localDevices.json */,
 				C67BAD8F214A38DE00A1F347 /* Assets.xcassets */,
+				FAD9EDEE214AC70800010A00 /* light.png */,
 				C67BAD8E214A38DE00A1F347 /* Base.lproj */,
 				C67BAD90214A38DE00A1F347 /* CatalogueTableViewController.swift */,
+				FAD9EDEC214AB8FA00010A00 /* DeviceDetailViewController.swift */,
 				C67BAD8D214A38DE00A1F347 /* DeviceCatalogue.swift */,
 				C67BAD91214A38DE00A1F347 /* DeviceRecord.swift */,
 				C67BAD92214A38DF00A1F347 /* PlaceCatalogue.swift */,
@@ -182,6 +188,7 @@
 				FA96C37D2146DCD600788BE0 /* Assets.xcassets in Resources */,
 				FA96C38E2146E4C000788BE0 /* localHouse.json in Resources */,
 				FA96C37B2146DCD600788BE0 /* Main.storyboard in Resources */,
+				FAD9EDEF214AC70800010A00 /* light.png in Resources */,
 				C67BAD97214A38DF00A1F347 /* Assets.xcassets in Resources */,
 				C67BAD96214A38DF00A1F347 /* Base.lproj in Resources */,
 				C67BAD94214A38DF00A1F347 /* localDevices.json in Resources */,
@@ -203,6 +210,7 @@
 				C67BAD95214A38DF00A1F347 /* DeviceCatalogue.swift in Sources */,
 				FA96C3782146DCD600788BE0 /* ViewController.swift in Sources */,
 				FA96C3762146DCD600788BE0 /* AppDelegate.swift in Sources */,
+				FAD9EDED214AB8FA00010A00 /* DeviceDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
