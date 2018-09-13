@@ -1,7 +1,10 @@
 {
-    "TotalDevices":2,
+    "TotalDevices":5,
     "Devices":[
               {"name":"Light1", "place":"House", "description":"This is my light in my house"},
+              {"name":"Lock", "place":"House", "description":"This is a door lock"},
               {"name":"CofeeMachine", "place":"Work", "description":"This is my coffee machine at work"},
+              {"name":"Modem", "place":"Work", "description":"This is my modem at work"},
+              {"name":"Fan", "place":"Work", "description":"Pa la Calocha"},
               ]
 }
