@@ -1,0 +1,7 @@
+{
+    "TotalDevices":2,
+    "Devices":[
+              {"name":"Light1", "place":"House", "description":"This is my light in my house"},
+              {"name":"CofeeMachine", "place":"Work", "description":"This is my coffee machine at work"},
+              ]
+}
