@@ -1,3 +1,4 @@
+
 //
 //  ViewController.swift
 //  AppHomeMapSpriteKit
@@ -5,7 +6,6 @@
 //  Created by Video on 10/09/18.
 //  Copyright © 2018 EHE. All rights reserved.
 //
-
 import UIKit
 import MapKit
 
@@ -14,7 +14,15 @@ protocol HandleMapSearch {
     func dropPinZoomIn(placemark:MKPlacemark)
 }
 
+
 class ViewController : UIViewController {
+    
+    public var nombre:String = "";
+    public var descr:String = "";
+    public var address:String = "";
+    public var latitude:Float = 0.0;
+    public var longitude:Float = 0.0;
+    
     // CLLocationManager gives access to the location manager throughout the  scope of the controller
     let locationManager = CLLocationManager()
     // mapKitVariable
@@ -24,9 +32,42 @@ class ViewController : UIViewController {
     // pin
     var selectedPin:MKPlacemark? = nil;
     
+    @IBOutlet weak var AcceptButton: UIBarButtonItem!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        if(selectedPin != nil){
+            print("DATOS")
+            let next = segue.destination as! PlaceDetailViewController;
+            next.newPlace = PlaceRecord(name:nombre, description:descr, address:address, latitude:Float(selectedPin!.coordinate.latitude), longitude:Float(selectedPin!.coordinate.longitude))
+            //var placeRecord = PlaceRecord(name:nombre, description:descr, address:address, latitude:latitude, longitude:longitude)
+            //print(placeRecord)
+        }else{
+            print("NO HAY DATOS")
+        }
+    }
+    
+    
+    @IBAction func buttonPressed(_ sender: UIBarButtonItem) {
+        if(sender.title == "Accept"){
+            if(selectedPin != nil){
+                print("DATOS")
+                //var placeRecord = PlaceRecord(name:nombre, description:descr, address:address, latitude:latitude, longitude:longitude)
+                performSegue(withIdentifier: "showPlaceData", sender: nil)
+            }else{
+                print("NO HAY DATOS")
+            }
+            
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print()
         /* Get current location of user */
         // delegate, handles responses asynchronously
         locationManager.delegate = self;
@@ -106,9 +147,12 @@ extension ViewController: HandleMapSearch {
         let annotation = MKPointAnnotation()
         annotation.coordinate = placemark.coordinate
         annotation.title = placemark.name
-        if let city = placemark.locality,
-            let state = placemark.administrativeArea {
+        if let city = placemark.locality, let state = placemark.administrativeArea, let name = placemark.name, let country = placemark.country, let code = placemark.postalCode{
+            
+            
             annotation.subtitle = "Cuidad: \(city) Estado: \(state)";
+            address = "\(name),\(city), \(country), \(code)";
+            nombre = "\(name)"
         }
         mapView.addAnnotation(annotation)
         let span = MKCoordinateSpanMake(0.05, 0.05)

@@ -63,4 +63,9 @@ public class PlaceRecord{
     public func setPlaceLongitude(longitude:Float)->Void{
         self.longitude = longitude
     }
+    
+    // To Json String func
+    public func toJSON()->String{
+        return "{\"name\":\"\(placeName)\",\"description\":\"\(placeDescription)\",\"address\":\"\(placeAddress)\",\"latitude\":\"\(placeLatitude)\",\"longitude\":\"\(placeLongitude)\"}";
+    }
 }

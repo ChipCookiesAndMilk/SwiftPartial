@@ -55,6 +55,21 @@ class CatalogueTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        myDevices.loadDevicesFromFile()
+        myPlaces.loadPlacesFromFile()
+        
+        // Adding the devices to the array of the place they belong to
+        for device in myDevices.devices{
+            for place in myPlaces.places{
+                if(device.devicePlace == place.placeName){
+                    //print("Adding device \(device.deviceName) to place \(place.placeName)")
+                    myPlaces.getPlaceWithName(name: place.placeName).addDevice(record: device)
+                }
+            }
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -111,6 +126,7 @@ class CatalogueTableViewController: UITableViewController {
     @objc func buttonClicked(sender : UIButton!) {
         // Print the name of the place the button called
         print("Clicked! \(myPlaces.places[sender.tag].placeName)")
+        performSegue(withIdentifier: "addDevice", sender: nil)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -163,6 +179,10 @@ class CatalogueTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "addDevice" {
+            var next = segue.destination as! AddDeviceViewController;
+            //next.myDevice = selectedDevice
+        }
         if segue.identifier == "showDeviceDetail" {
             var next = segue.destination as! DeviceDetailViewController;
             next.myDevice = selectedDevice

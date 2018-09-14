@@ -62,4 +62,20 @@ public class PlaceCatalogue{
             print("error on json: \(err)")
         }
     }
+    
+    public func toJSON()->String{
+        var jsonString:String = "";
+        
+        jsonString = jsonString+"{\n"
+        jsonString += "\"TotalPlaces\":\(places.count),\n"
+        jsonString += "\"Places\":[\n"
+        
+        for place in places{
+            jsonString += place.toJSON()+",\n"
+        }
+        
+        jsonString += "]"
+        jsonString = jsonString+"\n}"
+        return jsonString
+    }
 }

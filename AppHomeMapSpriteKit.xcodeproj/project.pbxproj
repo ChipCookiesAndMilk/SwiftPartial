@@ -26,6 +26,8 @@
 		FA96C38E2146E4C000788BE0 /* localHouse.json in Resources */ = {isa = PBXBuildFile; fileRef = FA96C38D2146E4C000788BE0 /* localHouse.json */; };
 		FAD9EDED214AB8FA00010A00 /* DeviceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9EDEC214AB8FA00010A00 /* DeviceDetailViewController.swift */; };
 		FAD9EDEF214AC70800010A00 /* light.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD9EDEE214AC70800010A00 /* light.png */; };
+		FAD9EDF1214AE6AE00010A00 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9EDF0214AE6AE00010A00 /* PlaceDetailViewController.swift */; };
+		FAEFAF33214B019500BA2E48 /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEFAF32214B019500BA2E48 /* AddDeviceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +52,9 @@
 		FA96C38B2146DD5900788BE0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FA96C38D2146E4C000788BE0 /* localHouse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = localHouse.json; sourceTree = "<group>"; };
 		FAD9EDEC214AB8FA00010A00 /* DeviceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailViewController.swift; sourceTree = "<group>"; };
-		FAD9EDEE214AC70800010A00 /* light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = light.png; path = "../../iosAppsDoNOTDelete/mapkit-ios-demo-master/MapKitDemo/light.png"; sourceTree = "<group>"; };
+		FAD9EDEE214AC70800010A00 /* light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = light.png; path = Assets.xcassets/light.imageset/light.png; sourceTree = "<group>"; };
+		FAD9EDF0214AE6AE00010A00 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
+		FAEFAF32214B019500BA2E48 /* AddDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 		FA96C3692146DCD500788BE0 = {
 			isa = PBXGroup;
 			children = (
+				FAD9EDF0214AE6AE00010A00 /* PlaceDetailViewController.swift */,
 				FA96C3742146DCD600788BE0 /* AppHomeMapSpriteKit */,
 				FA96C3732146DCD600788BE0 /* Products */,
 				FA96C3882146DD5600788BE0 /* Frameworks */,
@@ -89,6 +94,7 @@
 				FA96C3872146DD5600788BE0 /* AppHomeMapSpriteKit.entitlements */,
 				FA96C3752146DCD600788BE0 /* AppDelegate.swift */,
 				FA96C3772146DCD600788BE0 /* ViewController.swift */,
+				FAEFAF32214B019500BA2E48 /* AddDeviceViewController.swift */,
 				C6F2518B2148B3FA00031F45 /* LocationSearchTable.swift */,
 				FA96C38D2146E4C000788BE0 /* localHouse.json */,
 				C67BAD8C214A38DE00A1F347 /* localDevices.json */,
@@ -203,12 +209,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C67BAD9B214A38DF00A1F347 /* PlaceRecord.swift in Sources */,
+				FAEFAF33214B019500BA2E48 /* AddDeviceViewController.swift in Sources */,
 				C67BAD9A214A38DF00A1F347 /* PlaceCatalogue.swift in Sources */,
 				C67BAD99214A38DF00A1F347 /* DeviceRecord.swift in Sources */,
 				C67BAD98214A38DF00A1F347 /* CatalogueTableViewController.swift in Sources */,
 				C6F2518C2148B3FA00031F45 /* LocationSearchTable.swift in Sources */,
 				C67BAD95214A38DF00A1F347 /* DeviceCatalogue.swift in Sources */,
 				FA96C3782146DCD600788BE0 /* ViewController.swift in Sources */,
+				FAD9EDF1214AE6AE00010A00 /* PlaceDetailViewController.swift in Sources */,
 				FA96C3762146DCD600788BE0 /* AppDelegate.swift in Sources */,
 				FAD9EDED214AB8FA00010A00 /* DeviceDetailViewController.swift in Sources */,
 			);
