@@ -33,6 +33,7 @@ public class PlaceCatalogue{
     
     public func loadPlacesFromFile(){
         let filePath = Bundle.main.path(forResource: "localHouse", ofType: "json")
+        print(filePath)
         let contentData = FileManager.default.contents(atPath: filePath!)
         let content = String(data: contentData!, encoding: String.Encoding.isoLatin1) as! String
         

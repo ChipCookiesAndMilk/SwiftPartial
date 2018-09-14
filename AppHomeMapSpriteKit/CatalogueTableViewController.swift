@@ -128,6 +128,7 @@ class CatalogueTableViewController: UITableViewController {
         print("Clicked! \(myPlaces.places[sender.tag].placeName)")
         performSegue(withIdentifier: "addDevice", sender: nil)
     }
+
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //print( indexPath )

@@ -79,17 +79,20 @@ class PlaceDetailViewController: UIViewController {
                 let fileName = "localHouse"
                 let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
                 
-                let fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("json")
-                print("FilePath: \(fileURL.path)")
+                let fileP = Bundle.main.url(forResource: "localHouse", withExtension: "json")
+                let fileURL = fileP
                 
+                print("FilePath: \(fileURL)")
+               
                 let writeString = newPlaceCatalogue.toJSON()
                 do {
                     // Write to the file
-                    try writeString.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
+                    try writeString.write(to: fileURL!, atomically: true, encoding: String.Encoding.utf8)
+                
                 } catch let error as NSError {
                     print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
                 }
-                
+                /*
                 var readString = "" // Used to store the file contents
                 do {
                     // Read the file contents
@@ -98,6 +101,7 @@ class PlaceDetailViewController: UIViewController {
                     print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
                 }
                 print("File Text: \(readString)")
+                    */
             }
         }
         
